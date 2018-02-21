@@ -1,6 +1,8 @@
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import town.boom.io.Parser;
+import town.boom.io.Reader;
+import town.boom.loon.domain.World;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -118,5 +120,15 @@ public class BigTest {
         assertThat(result.get(1).get(3).get(2), is(equalTo(5)));
     }
 
+    @Test
+    public void testTheWorld() throws IOException {
+        World hello = World.fromFile("src/test/resources/hello.world");
+        System.out.println("Brian");
+    }
 
+    @Test
+    public void testBigInJapan() throws IOException {
+        World hello = World.fromFile("src/test/resources/loon_r70_c300_a8_radius7_saturation_250.in");
+        System.out.println("Brian!");
+    }
 }
